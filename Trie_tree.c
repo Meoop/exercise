@@ -1,3 +1,6 @@
+/*********************************************************
+	Trieï¿½ï¿½ï¿½Ä¼ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+**********************************************************/
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -29,7 +32,7 @@ void insertTree(Tree t,char *str){
     }else{
         cNode = t->child ;
         while(cNode!=NULL){
-            if(cNode->letter==str[0]){  //ÒÑ¾­ÔÚÊ÷ÖÐ
+            if(cNode->letter==str[0]){  //å·²ç»åœ¨æ ‘ä¸­
                 cNode->t = cNode->t+1 ;
                 insertTree(cNode,str+1) ;
                 is = 1 ;
@@ -37,7 +40,7 @@ void insertTree(Tree t,char *str){
             }
             cNode = cNode->nextbrother ;
         }
-        if(is==0){ //²åÈëÐÂ½Úµã
+        if(is==0){ //æ’å…¥æ–°èŠ‚ç‚¹
             newTreeNode = getNewTreeNode(str[0],1,NULL) ;
             newTreeNode->nextbrother = t->child ;
             t->child = newTreeNode ;
@@ -66,11 +69,11 @@ int numOfWord(Tree t,char *tstr){
 int main(){
     int n = 0 ;
     int m = 0 ;
-    int i = 0 ;  //ÓÃÓÚ¼ÆÊý
+    int i = 0 ;  //ç”¨äºŽè®¡æ•°
     int numword[100] = {0} ;
-    char str[100] ;  //ÊäÈë×Ö·û´®
+    char str[100] ;  //è¾“å…¥å­—ç¬¦ä¸²
     char *s ;
-    char tstr[100] ;  //²âÊÔ×Ö·û´®
+    char tstr[100] ;  //æµ‹è¯•å­—ç¬¦ä¸²
     TreeNode Tree = (TreeNode)malloc(sizeof(struct treenode)) ;
     Tree->letter = '0' ;
     Tree->t = 0 ;
