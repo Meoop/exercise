@@ -7,7 +7,8 @@ then
     echo "$n is a negative."
 elif [ $n -eq 0 ]
 then
-    echo "$n is zern number."
+    echo "$n is zero number."
 else
     echo "Oops! $n is not a number."
 fi
+

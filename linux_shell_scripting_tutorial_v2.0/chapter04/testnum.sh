@@ -6,4 +6,3 @@ then
 else
     echo "$n number is negative number."
 fi
-

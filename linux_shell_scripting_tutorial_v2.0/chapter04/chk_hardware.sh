@@ -1,19 +1,19 @@
 #!/bin/bash
 # Purpose: Detecting Hardware Errors
-# Author: Vivek Gite
-# Note: The script must run as a corn-job
-# Last updated on: 28-Aug-2007
+# Author: Vivek Gite <vivke@nixcraft.com>
+# Note: The script must run as a cron-job.
+# Last updated on : 28-Aug-2007
+# ---------------------------------------------
 
-# Story path to commands
+# Store path to commands
 LOGGER=/usr/bin/logger
 FILE=/var/log/mcelog
-FILE=/dev/mcelog
 
-# Story email setting
+# Store email setting
 AEMAIL="vivek@nixcraft.net.in"
 ASUB="H/W Error - $(hostname)"
 AMESS="Warning - Hardware errors found on $(hostname) @ $(date). See log file for the details /var/log/mcelog."
-OK_MESS="OK: NO Hardware Error Found."
+OK_MESS="OK: NO hardware Error Found."
 WARN_MESS="ERROR: Hardware Error Found."
 
 # Check if $FILE exists or not
@@ -33,5 +33,3 @@ then
 else
     echo "$OK_MESS"
 fi
-
-

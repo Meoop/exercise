@@ -6,10 +6,16 @@ PASSWD_FILE=/etc/passwd
 read -p "Enter a user name: " username
 
 # try to locate username in in /etc/passwd
-if grep "^$username" $PASSWD_FILE > /dev/null
-then
-    echo "User $username found in $PASSWD_FILE file."
-else
-    echo "User $username not found in $PASSWD_FILE file."
-fi
+grep "^$username" $PASSWD_FILE > /dev/null
 
+# store exit status of grep
+# if found grep will return 0 exit status
+# if not found, grep will return a nonzero exit status
+status=$?
+
+if test $status -eq 0
+then
+    echo "User '$username' found in $PASSWD_FILE file."
+else
+    echo "User '$username' not found in $PASSWD_FILE file."
+fi
