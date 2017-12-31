@@ -7,4 +7,10 @@ func main() {
 	fmt.Println("s==", s)
 	fmt.Println("s[1:4]==", s[1:4])
 
+	// 省略下标表示从0开始
+	fmt.Println("s[:3]==", s[:3])
+
+	//省略上标表示到len(s)结束
+	fmt.Println("s[4:]==", s[4:])
+
 }
