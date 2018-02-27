@@ -4,6 +4,7 @@
 * c_primer_plus    
     C Primer Plus 第五版示例代码以及课后练习
 * a_tour_of_go
-    [A　Tour of Go(Go指南)](https://tour.golang.org/welcome/1)　 
-
+    [A Tour of Go(Go指南)](https://tour.golang.org/welcome/1)　 
+* the_go_programming_language
+    [The Go Programming Language](http://www.gopl.io/)
     
